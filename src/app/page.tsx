@@ -343,24 +343,26 @@ export default function Home() {
                 )}
 
                 {/* Original Blog Content */}
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardHeader>
-                    <CardTitle className="text-white text-lg flex items-center gap-2">
-                      Original Content
-                      <Badge variant="outline" className="text-xs bg-white/10 text-white border-white/20">
-                        {fullText.length.toLocaleString()} characters
-                      </Badge>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="bg-white/5 rounded-lg p-4 max-h-60 overflow-y-auto">
-                      <p className="text-white/80 text-sm leading-relaxed">
-                        {fullText}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-
+<Card className="bg-white/10 backdrop-blur-sm border-white/20">
+  <CardHeader className="p-4 sm:p-6">
+    <CardTitle className="text-white text-base sm:text-lg flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+      <span>Original Content</span>
+      <Badge 
+        variant="outline" 
+        className="text-xs bg-white/10 text-white border-white/20 w-fit"
+      >
+        {fullText.length.toLocaleString()} characters
+      </Badge>
+    </CardTitle>
+  </CardHeader>
+  <CardContent className="p-4 sm:p-6 pt-0">
+    <div className="bg-white/5 rounded-lg p-3 sm:p-4 max-h-48 sm:max-h-60 lg:max-h-72 overflow-y-auto">
+      <p className="text-white/80 text-xs sm:text-sm leading-relaxed break-words">
+        {fullText}
+      </p>
+    </div>
+  </CardContent>
+</Card>
                 {/* Summary */}
                 {summary && (
                   <Card className="bg-green-500/20 border-green-500/50">
