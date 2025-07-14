@@ -133,7 +133,7 @@ export default function Home() {
     updateProgress('summarizing', 100);
 
     updateProgress('translating', 0);
-    const urduTranslation = translateToUrdu(summaryText);
+    const urduTranslation = await translateToUrdu(summaryText);
     setTranslated(urduTranslation);
     updateProgress('translating', 100);
 

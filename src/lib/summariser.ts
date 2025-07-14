@@ -23,7 +23,7 @@ export const summarise = (text: string): string => {
   // Sort by score and take top sentences
   const topSentences = scoredSentences
     .sort((a, b) => b.score - a.score)
-    .slice(0, 3)
+    .slice(0, 2)
     .map(item => item.sentence);
 
   if (topSentences.length > 0) {
