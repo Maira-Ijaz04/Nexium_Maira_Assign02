@@ -209,7 +209,7 @@ export default function Home() {
                 >
                   <CardContent className="p-4">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-semibold text-white text-sm">{blog.title}</h3>
+                     <h3 className="font-semibold text-white text-sm sm:text-base lg:text-lg">{blog.title}</h3>
                       <Badge variant="outline" className="text-xs bg-white/10 text-white border-white/20">
                         {blog.category}
                       </Badge>
