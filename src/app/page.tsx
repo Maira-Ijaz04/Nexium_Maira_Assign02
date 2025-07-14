@@ -13,6 +13,9 @@ import { translateToUrdu } from '@/lib/translator';
 import { saveFullText, saveSummary } from '@/lib/mongodb';
 import { saveToSupabase } from '@/lib/supabase';
 
+
+
+
 interface BlogOption {
   title: string;
   url: string;
