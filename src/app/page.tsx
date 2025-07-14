@@ -193,7 +193,8 @@ export default function Home() {
             <p className="text-white/80">Choose a blog to summarize or enter your own URL:</p>
           </CardHeader>
           
-          <CardContent className="space-y-6">
+         <CardContent className="space-y-6 overflow-x-hidden">
+
             {/* Blog Selection Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {blogOptions.map((blog, index) => (
@@ -240,7 +241,8 @@ export default function Home() {
             {/* URL Input Section */}
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
               <p className="text-white/80 mb-3">Selected URL or enter your own:</p>
-              <div className="flex gap-3">
+             <div className="flex flex-col sm:flex-row gap-3">
+
                 <Input
                   placeholder="Enter blog URL (e.g., https://example.com/article)"
                   value={url}
@@ -357,7 +359,8 @@ export default function Home() {
   </CardHeader>
   <CardContent className="p-4 sm:p-6 pt-0">
     <div className="bg-white/5 rounded-lg p-3 sm:p-4 max-h-48 sm:max-h-60 lg:max-h-72 overflow-y-auto">
-      <p className="text-white/80 text-xs sm:text-sm leading-relaxed break-words">
+     <p className="text-white/80 text-xs sm:text-sm leading-relaxed break-words whitespace-pre-wrap">
+
         {fullText}
       </p>
     </div>
