@@ -208,7 +208,12 @@ export default function Home() {
                   onClick={() => handleSelectBlog(blog.url)}
                 >
                   <CardContent className="p-4">
-                   
+                    <div className="flex justify-between items-start mb-2">
+                     <h3 className="text-sm text-white/70 mb-3">{blog.title}</h3>
+                      <Badge variant="outline" className="text-xs bg-white/10 text-white border-white/20">
+                        {blog.category}
+                      </Badge>
+                    </div>
                     <p className="text-sm text-white/70 mb-3">{blog.description}</p>
                     <div className="flex items-center justify-between mb-3">
                       <p className="text-xs text-blue-300 truncate flex-1 mr-2">
@@ -329,7 +334,8 @@ export default function Home() {
                     </CardHeader>
                     <CardContent className="space-y-2">
                       {metadata.title && (
-                        <p className="text-white/90"><strong>Title:</strong> {metadata.title}</p>
+                        <p className="text-white/90 text-sm sm:text-base lg:text-lg break-words">
+  <strong>Title:</strong> {metadata.title}</p>
                       )}
                       {metadata.description && (
                         <p className="text-white/90"><strong>Description:</strong> {metadata.description}</p>
